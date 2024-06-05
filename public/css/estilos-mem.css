@@ -1,0 +1,249 @@
+*{
+    /* margin: 0; */
+    /* padding: 0; */
+    box-sizing: border-box;
+    /* font-family: "Poppins", sans-serif; */
+}
+
+body {
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../../img/fondo.jpg') no-repeat;
+    background-size: cover;
+    background-position: center; */
+    font-family:'Times New Roman', Times, serif;
+    margin: 0;
+}
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+.color-textos{
+    color: blueviolet;
+}
+
+
+#nuestros-servi .container{
+    text-align:center;
+    padding: 200px 12px;
+    color:rgb(0, 0, 0) ;
+    /* background-color: blue; */
+}
+
+#producc{
+    background-color: rgb(10, 3, 19);
+    color: rgb(255, 255, 255);
+
+}
+
+#producc .container{
+    margin-top:0;
+    text-align: center;
+
+    padding: 30px 0px;
+    background-size: cover;
+}
+#producc h2{
+
+    font-size: 3.5em;
+
+    /* margin-top: 0;
+    color: rgb(102, 74, 97);
+    box-shadow: 2px 2px 20px rgba(255, 255, 255, 0.5); */
+}
+
+#producc h3{
+    margin-top: 0;
+    font-size: 2.5em;
+}
+#producc h4{
+    font-size: 2em;
+    color: rgb(139, 97, 255);
+}
+#producc p{
+    display: none;
+    align-items: center;
+}
+
+
+
+#producc .cartas{
+    background-size:cover;
+    background-position: center,center;
+    padding: 70px;
+    margin: 20px;
+    border-radius: 30px;
+    border: 1px  solid rgb(234, 233, 255);
+    box-shadow: 0px 1px 10px rgb(194, 184, 255);
+    transition: all 400ms ease;
+}
+#producc .cartas:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    transform:translateY(-3%);
+}
+.cartas:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url("/img/fondo.jpg");
+}
+.cartas:nth-child(2){
+    background-image:
+    linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url("/img/fondo.jpg");
+}
+
+.cartas:nth-child(3){
+    background-image:
+    linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url("/img/fondo.jpg");
+}
+
+/* footer{
+    color: rgb(0, 0, 0);
+    background-color: rgb(179, 172, 172);
+}
+
+footer p{
+    margin: 0;
+    color: black;
+    padding: 25px;
+
+}
+footer .container{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end ;
+} */
+
+/* sidebar carrito compras botones  */
+.compra button {
+
+
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.compra{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10PX;
+}
+
+
+.delete-button {
+    padding: 1px 5px; /* Establecer el relleno */
+}
+.custom-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 12px;
+    padding: 5px;
+}
+
+.total-price {
+    font-size: 20px; /* Tamaño de fuente más grande */
+    color: red; /* Color rojo */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Pantalla completa */
+
+@media (min-width: 720px){
+    #nuestros-servi .container{
+        display: flex;
+        justify-content: space-evenly;
+        }
+
+    #nuestros-servi .texto{
+        width: 50%;
+        max-width: 500px;
+        text-align: initial;
+        padding: 0px 35px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+    }
+    #nuestros-servi .h2{
+        margin-top: 0px;
+    }
+    #nuestros-servi .h3{
+        margin-top: 0px;
+    }
+
+    #producc .programas{
+        display: flex;
+        justify-content: center;
+        
+    }
+    #producc p{
+        display: block;
+        font-size: 1.2em;
+        margin-bottom:30px;
+    }
+
+    #producc h3{
+        margin-top: 0px;
+    }
+
+    #producc .cartas{
+        padding: 20px 120px;
+        text-align: center;
+        height: 650px;
+        width: 420px;
+}
+
+}
+
+  /* Estilos para el sidebar del carrito */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Por defecto oculto */
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 1000; /* Asegúrate de que el z-index sea mayor que el de otros elementos en la página */
+}
+
+.cart-sidebar.open {
+    right: 0; /* Mostrar el sidebar desplazándolo a la posición correcta */
+}
+
+.cart-content {
+    padding: 20px;
+}
+
+.close-cart {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/estilo-login.css">
+    <link rel="stylesheet" href="/css/barra.css">
+    <title>Inicia Sesion</title>
+</head>
+<body>
+    <header>
+        <!-- BarraPrin barra de busqueeda  -->
+        <div class="container">
+        <!-- <a href="index.html" class="logoo"></a>
+        <img src="img/logo.jpeg" class="logo-logoo"> -->
+        <p class="logo"><a href="/login">Js services</a></p>
+  
+  
+        <nav>
+            <!-- <a href="http://localhost:3000/#servicios">Servicios</a>
+            <a href="/login">Inicio de sesion</a> -->
+            <a href="/registro">Registro</a>
+            <!-- <a href="../membresias/membresia.html"><i class='bx bxs-cart-add'></i></a> -->
+
+  
+        </nav>
+        </div>
+    </header>
+
+    <section id="info">
+        <div class="container">
+
+
+    <div class="tabla">
+        <form action="/login" method="post">
+
+            <h1>Iniciar sesion</h1>
+
+            <div class="input">
+                <input type="text" placeholder="Nombre" name="user" >
+                <i class='bx bxs-user'></i>
+            </div>
+
+            <div class="input">
+                <input type="password"  placeholder="Contraseña"  name="password"  class ="contra3" id="contra3" >  
+                <i onclick="pass1()" class='bx bx-show-alt'></i>
+            </div>
+
+
+            <button type="submit" class="btn">Iniciar sesion</button>
+
+            <div class="registrar-link">
+                <p>
+                    No tienes cuenta? <a href="/registro">Registrarse</a>
+                </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container">
+    <p>&copy; JS SERVICES</p>
+    </div>
+</footer>
+
+    <script src="/js/ver-contra2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <% if(typeof alert != "undefined") { %>
+        <script>
+            Swal.fire({
+                title: "<%= alertTitle %>",
+                text: "<%= alertMessage %>",
+                icon: "<%= alertIcon %>",
+                showConfirmButton: <%= showConfirmButton %>,
+                timer: <%= timer %>,
+                color: "<%= color %>",
+                background: "<%= background %>"
+            }).then(()=>{
+                window.location="/<%= ruta %>"
+            })
+        </script>
+    <% } %>
+</body>
+</html>
